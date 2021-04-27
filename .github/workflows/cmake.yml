@@ -25,7 +25,6 @@ jobs:
     - run: sudo apt install ros-foxy-example-interfaces
     - run: sudo apt install ros-foxy-sensor-msgs
     - run: sudo apt install ros-foxy-geometry-msgs
-    - run: sudo apt install ros-foxy-ge
     - run: sudo apt install ros-foxy-joy*
 
     - name: Create Build Environment

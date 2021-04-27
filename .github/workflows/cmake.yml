@@ -22,6 +22,10 @@ jobs:
     - run: echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
     - run: sudo apt update
     - run: sudo apt install ros-foxy-ros-base
+    - run: sudo apt install ros-foxy-example-interfaces
+    - run: sudo apt install ros-foxy-sensor-msgs
+    - run: sudo apt install ros-foxy-geometry-msgs
+    - run: sudo apt install ros-foxy-ge
     - run: sudo apt install ros-foxy-joy*
 
     - name: Create Build Environment

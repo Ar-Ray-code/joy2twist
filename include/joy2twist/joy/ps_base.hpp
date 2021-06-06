@@ -5,8 +5,8 @@
 #define PS4 4
 #define PS3 3
 
-#include <rclcpp/rclcpp.hpp>
-#include <sensor_msgs/msg/joy.hpp>
+#include <ros/ros.h>
+#include <sensor_msgs/Joy.h>
 #include <string>
 
 class ps_base
@@ -41,12 +41,12 @@ class ps_base
         float joy_right_x;
         float joy_right_y;
 
-        virtual void get_data(const sensor_msgs::msg::Joy::SharedPtr msg)=0;
-        virtual void sub_joy_thread(const sensor_msgs::msg::Joy::SharedPtr msg)
+        virtual void get_data(const sensor_msgs::Joy &msg)=0;
+        virtual void sub_joy_thread(const sensor_msgs::Joy &msg)
         {
             get_data(msg);
         };
-        rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joy;
+        ros::Subscriber sub_joy;
 
         ps_base()
         {

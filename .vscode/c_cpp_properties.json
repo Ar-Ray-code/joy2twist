@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/ros/dashing/include"
+                "/opt/ros/noetic/include",
+                "~/ros1_ws/src/joy2twist/include/joy2twist/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

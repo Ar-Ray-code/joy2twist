@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="joy" name="joy_node" type="joy_node"/>
+    <node pkg="joy2twist" name="twist2int32" type="twist2int32"/>
+    <node pkg="joy2twist" name="joy2twist" type="joy2twist">
+        <param name="pub_rate" value="1"/>
+    </node>
+    <node pkg="rosserial_python" name="serial_node" type="serial_node.py">
+        <param name="port" value="/dev/ttyACM0"/>
+    </node>
+    <node pkg="rqt_graph" name="rqt_graph" type="rqt_graph"/>
+</launch>
